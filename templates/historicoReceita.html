@@ -29,19 +29,19 @@
             <nav>
                 <div>
                     <i class="fa-solid fa-wallet"></i>
-                    <a href="home.html">Home</a>
+                    <a href="{{ url_for('home') }}">Home</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-sack-dollar"></i>
-                    <a href="adicionarReceita.html">Adicionar Receita</a>
+                    <a href="{{ url_for('abrirReceita') }}">Adicionar Receita</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-hand-holding-dollar"></i>
-                    <a href="adicionarDespesa.html">Adicionar Despesa</a>
+                    <a href="{{ url_for('abrirDespesa') }}">Adicionar Despesa</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-file"></i>
-                    <a href="historico.html">Histórico</a>
+                    <a href="{{ url_for('historico') }}">Histórico</a>
                 </div>
             </nav>
         </div>
@@ -53,7 +53,7 @@
                 <div class="periodo">
                     <div class="div-mes-ano">
                         <h2>Período</h2>
-                        <p id="periodoSelecionado">Outubro/2024</p> <!-- ID para manipulação com JavaScript -->                       
+                        <p id="periodoSelecionado">Outubro/2024</p> <!-- ID para manipulação com JavaScript -->
                     </div>
                     <i class="fa-solid fa-chevron-right" id="setaFiltro" onclick="toggleDropdown()"></i>
                     <div id="dropdownPeriodo" class="dropdown">
@@ -82,7 +82,7 @@
                 <div class="container-historico">
                     <div class="div-historico div-primeira">
                         <div class="div-grupo-fonte">
-                            <img src="../assets/img/despesa.svg" alt="ícone de moeda">
+                            <img src="../static/img/despesa.svg" alt="ícone de moeda">
                             <div class="div-fonte">
                                 <p class="fonte">Fonte</p>
                                 <p class="legenda">Transferência recebida</p>
@@ -96,7 +96,7 @@
 
                     <div class="div-historico">
                         <div class="div-grupo-fonte">
-                            <img src="../assets/img/despesa.svg" alt="ícone de moeda">
+                            <img src="../static/img/despesa.svg" alt="ícone de moeda">
                             <div class="div-fonte">
                                 <p class="fonte">Fonte</p>
                                 <p class="legenda">Transferência recebida</p>
@@ -150,11 +150,11 @@
                         </div>
                     </div>
                 </div>
-                <a href="historico.html" class="btn-voltar-historico">Voltar</a>
+                <a href="{{ url_for('historico') }}" class="btn-voltar-historico">Voltar</a>
             </div>
         </section>
     </main>
 
-    <script src="../script.js"></script>
+    <script src="../static/script.js"></script>
 </body>
 </html>
